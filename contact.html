@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1 class="logo"><span>R</span>ekha.S</h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="project.html">Project</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div id="contact">
+        <p>Get <span>In Touch</span></p>
+    </div>
+    <div class="form">
+        <div class="info">
+            <form class="form" action="" onsubmit=" formValidation()">
+                <h2>Get In Touch</h2><br><br><br>
+
+                <input type="text" id="name"  required placeholder="Enter Your Name"><br>
+                <input type="text" id="email"  required placeholder="Enter Your E-mail"><br>
+                <input type="number" id="phone"  required placeholder="Enter Your Number">
+                <textarea name="Write a Message" id="text" cols="30" rows="10" placeholder="Write Your Message"></textarea><br><br>
+                <input class="button" type="submit">
+            </form>
+            <div class="details">
+                <h1>Contact Details</h1><br><br><br><br>
+                <span>EMAIL</span>
+                <p>rekhashiva68@gmail.com</p><br><br>
+                <span>PHONE</span>
+                <p>7338438137</p><br><br>
+                <span>xxxxxxxx</span>
+                <p>yyyyyyyy</p><br><br>
+                <span>ADDRESS</span>
+                <p>Azad nagar chamarajpet BANGALORE 560018.</p>
+            </div>
+        </div>
+        
+    </div>
+    <script>
+        
+        
+      function formValidation(){
+        let a=document.getElementById("name").value
+        let b=document.getElementById("email").value
+        let c=document.getElementById("phone").value
+        let d=document.getElementById("text").value
+
+        if(a.length<5){
+
+          alert("Name should be > 5 letters")
+
+        }
+        else{
+          alert("form successfully submitted ")
+          localStorage.setItem("name",a)
+          localStorage.setItem("mail",b)
+          localStorage.setItem("phone",c)
+          localStorage.setItem("text",d)
+
+        }
+    }
+    
+
+    //   let pattern=/^[a-zA-Z]+[0987654321]+[!@#$%^&*()]+$/
+    //   let input="fsfsA4#$"
+    //   let result=pattern.test(input)
+    //   console.log(result)
+    </script>
+</body>
+</html>
